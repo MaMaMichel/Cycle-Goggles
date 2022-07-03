@@ -80,7 +80,7 @@ def train_one_step(Gen1, Gen2, Disc1, Disc2,
 
     OptGen2.step()
 
-    return G1Loss.item(), D1Loss.item(), G2Loss.item(), D2Loss.item()
+    return FakeImageA.detach(), FakeImageB.detach(), G1Loss.item(), D1Loss.item(), G2Loss.item(), D2Loss.item()
 
 
 
